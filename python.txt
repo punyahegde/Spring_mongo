@@ -1,0 +1,88 @@
+#DivExp
+import sys
+def DivExp(a,b):
+  assert a>0, "a should be greater than 0"
+  try:
+    c=a/b
+  except zero Divisionerror:
+    print("values of b cannot be zero")
+    sys.exit(0)
+  else:
+    return c
+val1=int(input("Enter the value a:"))
+val2=int(input("Enter the value b:"))
+val3=DivExp(val1,val2)
+print(val1,val2,val3)
+
+
+
+#multi digit frequency
+num=input("Enter the number:")
+print("Entered number is :",num)
+uniqdig=set(num)
+for elem in uniqdig:
+  print(elem,"occurs",num.count(elem),"times")
+
+
+#mean,variance and standard deviation
+import statistics
+from math import sqrt
+a=list()
+num=int(input("Enter the number:"))
+print("Enter the number in array:")
+for i in range(num):
+  n=int(input('num'))
+  a.append(n)
+print(a)
+m=statistics.mean(a)
+v=statistics.variance(a)
+stdev=statistics.stdev(a)
+print("Mean is ",m)
+print("Variance is ",v)
+print("Standard deviation is ",stdev)
+
+
+
+class complex():
+  def int_complex(self):
+    self.realpart=int(input("Enter the real part:"))
+    self.imgpart=int(input("Enter the imaginary part:"))
+  def display(self):
+    print(self.realpart,"+",self.imgpart,"i",sep=" ")
+  def sum(self,c1,c2):
+    self.realpart=c1.realpart+c2.realpart
+    self.imgpart=c1.imgpart+c2.imgpart
+c1=complex()
+c2=complex()
+c3=complex()
+print("Enter the 1st complex number:")
+c1.int_complex()
+print("The 1st complex numbers are",end=" ")
+c1.display()
+print("Enter the 2nd complex numbers:")
+c2.int_complex()
+print("The 2nd complex numbers are",end=" ")
+c2.display()
+print("The sum of 2 complex numbers are ")
+c3.sum(c1,c2)
+c3.display()
+
+
+
+class student:
+  def getstudentdetails(self):
+    self.name=input("Enter the student name:")
+    self.usn=input("Enter the USN:")
+    self.physics=int(input("Enter the phyiscs marks:"))
+    self.chemistry=int(input("Enter the chemistry marks:"))
+    self.math=int(input("Enter the math marks:"))
+  def printresult(self):
+    self.percentage=int(self.physics+self.chemistry+self.math)/300*100
+    print(self.usn,self.name,self.percentage)
+s1=student()
+s1.getstudentdetails()
+print("Result : ")
+s1.printresult()
+s1.physics+=9
+print("Result after adding grace marks to physics:")
+s1.printresult()
