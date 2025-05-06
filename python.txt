@@ -77,7 +77,7 @@ class student:
     self.chemistry=int(input("Enter the chemistry marks:"))
     self.math=int(input("Enter the math marks:"))
   def printresult(self):
-    self.percentage=int(self.physics+self.chemistry+self.math)/300*100
+    self.percentage=int(self.physics+self.chemistry+self.math)/400*100
     print(self.usn,self.name,self.percentage)
 s1=student()
 s1.getstudentdetails()
